@@ -10,12 +10,21 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     fileInclude = require('gulp-file-include');
 
-var path = {
-   src: 'src/',
+var src = {
   html: 'src/**/*.html',
-    js: 'src/js/*.js',
+  index: 'src/index.html',
+  js: 'src/js/*.js',
   sass: 'src/sass/**/*.scss',
-   css: 'src/css/',
+  images: 'src/images/**/*',
+  fonts: 'src/fonts/**/*'
+}
+
+var site = {
+  root: 'site/',
+  js: 'site/js/',
+  css: 'site/css/',
+  images: 'site/images/',
+  fonts: 'site/fonts/'
 }
 
 var localPort = 4000,
@@ -25,44 +34,51 @@ gulp.task('server', function(){
   var server = connect();
 
   server.use(connectLivereload({port: lrPort}));
-  server.use(serveStatic(path.src));
+  server.use(serveStatic(site.root));
   server.listen(localPort);
 
   console.log("\nlocal server running at http://localhost:" + localPort + "/\n");
 });
 
 gulp.task('sass', function(){
-  gulp.src(path.sass)
+  gulp.src(src.sass)
     .pipe(sass({
-      outputStyle: [ 'expanded' ],
-      sourceComments: 'normal'
+      outputStyle: [ 'compressed' ]
     }).on('error', sass.logError))
     .pipe(prefix())
-    .pipe(gulp.dest(path.css))
+    .pipe(gulp.dest(site.css))
     .pipe(gulpLivereload());
 })
 
-gulp.task('jshint', function(){
-  gulp.src(path.js)
+gulp.task('js', function(){
+  gulp.src(src.js)
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
+    .pipe(gulp.dest(site.js))
     .pipe(gulpLivereload());
 });
 
 gulp.task('html', function(){
-  gulp.src(path.html)
+  gulp.src(src.index)
     .pipe(fileInclude({
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(gulp.dest(path.src))
+    .pipe(gulp.dest(site.root))
     .pipe(gulpLivereload());
 });
 
+gulp.task('assets', function(){
+  gulp.src(src.images)
+    .pipe(gulp.dest(site.images));
+  gulp.src(src.fonts)
+    .pipe(gulp.dest(site.fonts));
+});
+
 gulp.task('watch', function(){
-  gulp.watch(path.sass, ['sass']);
-  gulp.watch(path.js, ['jshint']);
-  gulp.watch(path.html, ['html']);
+  gulp.watch(src.sass, ['sass']);
+  gulp.watch(src.js, ['js']);
+  gulp.watch(src.html, ['html']);
 
   gulpLivereload.listen();
 })
