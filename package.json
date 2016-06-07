@@ -16,6 +16,7 @@
     "connect-livereload": "^0.5.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-file-include": "^0.13.7",
     "gulp-jshint": "^2.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-sass": "^2.3.0",

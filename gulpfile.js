@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     gulpLivereload = require('gulp-livereload'),
     sass = require('gulp-sass'),
     prefix = require('gulp-autoprefixer'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    fileInclude = require('gulp-file-include');
 
 var path = {
    src: 'src/',
@@ -50,6 +51,11 @@ gulp.task('jshint', function(){
 
 gulp.task('html', function(){
   gulp.src(path.html)
+    .pipe(fileInclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest(path.src))
     .pipe(gulpLivereload());
 });
 
