@@ -5,31 +5,31 @@
 @font-face {
   font-family: 'brandon-text';
   font-weight: 400;
-  src: url('../fonts/3146DE_2_0.eot');
-  src: url('../fonts/3146DE_2_0.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/3146DE_2_0.woff2') format('woff2'),
-       url('../fonts/3146DE_2_0.woff') format('woff'),
-       url('../fonts/3146DE_2_0.ttf') format('truetype');
+  src: url($hs-cdn-url + 'fonts/3146DE_2_0.eot');
+  src: url($hs-cdn-url + 'fonts/3146DE_2_0.eot?#iefix') format('embedded-opentype'),
+       url($hs-cdn-url + 'fonts/3146DE_2_0.woff2') format('woff2'),
+       url($hs-cdn-url + 'fonts/3146DE_2_0.woff') format('woff'),
+       url($hs-cdn-url + 'fonts/3146DE_2_0.ttf') format('truetype');
 }
 
 // BOLD
 @font-face {
   font-family: 'brandon-text';
   font-weight: 700;
-  src: url('../fonts/3146DE_1_0.eot');
-  src: url('../fonts/3146DE_1_0.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/3146DE_1_0.woff2') format('woff2'),
-       url('../fonts/3146DE_1_0.woff') format('woff'),
-       url('../fonts/3146DE_1_0.ttf') format('truetype');
+  src: url($hs-cdn-url + 'fonts/3146DE_1_0.eot');
+  src: url($hs-cdn-url + 'fonts/3146DE_1_0.eot?#iefix') format('embedded-opentype'),
+       url($hs-cdn-url + 'fonts/3146DE_1_0.woff2') format('woff2'),
+       url($hs-cdn-url + 'fonts/3146DE_1_0.woff') format('woff'),
+       url($hs-cdn-url + 'fonts/3146DE_1_0.ttf') format('truetype');
 }
 
 // BLACK
 @font-face {
   font-family: 'brandon-text';
   font-weight: 900;
-  src: url('../fonts/3146DE_0_0.eot');
-  src: url('../fonts/3146DE_0_0.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/3146DE_0_0.woff2') format('woff2'),
-       url('../fonts/3146DE_0_0.woff') format('woff'),
-       url('../fonts/3146DE_0_0.ttf') format('truetype');
+  src: url($hs-cdn-url + 'fonts/3146DE_0_0.eot');
+  src: url($hs-cdn-url + 'fonts/3146DE_0_0.eot?#iefix') format('embedded-opentype'),
+       url($hs-cdn-url + 'fonts/3146DE_0_0.woff2') format('woff2'),
+       url($hs-cdn-url + 'fonts/3146DE_0_0.woff') format('woff'),
+       url($hs-cdn-url + 'fonts/3146DE_0_0.ttf') format('truetype');
 }

@@ -18,13 +18,12 @@ $primary: $pink;
 
 // TYPOGRAPHY
 $base-font: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-$museo: 'museo-sans', $base-font;
-$brandon: 'brandon-grotesque', $base-font;
+$brandon: 'brandon-text', $base-font;
 
 $body-font-size: 16px;
-$font-regular: 300; // $museo only
-$font-bold: 700; // $museo only
-$font-black: 900; // $brandon only
+$font-regular: 400;
+$font-bold: 700;
+$font-black: 900;
 
 $tera: 78px;
 $giga: 60px;
@@ -43,3 +42,6 @@ $medium: 650px;
 $small: 500px;
 
 $gutter: 20px;
+
+// HUBSPOT CND URL - prefix all asset urls
+$hs-cdn-url: 'http://cdn2.hubspot.net/hubfs/2277134/';
