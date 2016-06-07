@@ -3,4 +3,7 @@
 //===============================================================================
 .body-container-wrapper {
   @extend .grid;
+
+  padding-top: 120px;
+  padding-bottom: 40px;
 }
