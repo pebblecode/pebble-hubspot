@@ -2,21 +2,80 @@
 // GLOBAL HEADER
 //===============================================================================
 .gbl-head {
+  background-color: $primary;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
   transition: 0.3s box-shadow, 0.3s background-color;
   opacity: 0.99;
   border-bottom: 1px solid rgba(white, 0.25);
   transform: translateZ(0);
 
+  &.pink { background-color: $pink }
+  &.purple { background-color: $purple; }
+
+  &.blue,
+  .blog-by-tag & {
+    background-color: $blue;
+  }
+
+  &.aqua,
+  .blog &,
+  .post & {
+    background-color: $aqua;
+  }
+
   &:not(.top) { box-shadow: 0 3px 0 rgba(black, 0.06); }
 }
 
-.gbl-head-logo:hover {
+.gbl-head-inner {
+  padding: 40px $gutter * 2 20px;
+  position: relative;
+
+  @media screen and ( max-width: $medium + 100px ) {
+    padding: 20px 0 15px;
+  }
+}
+
+.gbl-head-logo {
+  position: relative;
   color: transparent;
-  opacity: 0.8;
+  overflow: hidden;
+  display: block;
+  width: 175px;
+  height: 31px;
+  transition: 0.2s;
+
+  &:after {
+    @include icon-pseudo;
+    @include sprite($logo-white);
+
+    bottom: 0;
+    left: 0;
+  }
+
+  &:hover {
+    color: transparent;
+    opacity: 0.8;
+  }
+
+  @media screen and ( max-width: $medium + 100px ) {
+    margin-left: $gutter;
+  }
 }
 
 .gbl-head-nav {
+  position: absolute;
+  right: $gutter * 2;
+  top: 0;
+
   @media screen and ( max-width: $medium + 100px ) {
+    position: relative;
+    top: 15px;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
     transition: 0.3s max-height ease-out, 0.3s box-shadow;
 
     &.active {
@@ -29,8 +88,16 @@
 .gbl-head-nav-item {
   border-bottom: 5px solid transparent;
   transition: 0.2s;
+  color: white;
+  display: block;
+  float: left;
+  padding: 45px 15px 18px;
+  color: rgba(white, 0.5);
+  text-decoration: none;
 
   @media screen and ( max-width: $medium + 100px ) {
+    float: none;
+    padding: 10px $gutter;
     border: none;
     text-align: right;
     font-size: $delta;
@@ -55,8 +122,37 @@
   }
 }
 
-.gbl-head-btn.active::after {
-  @include sprite($close-grey);
-  top: 14px;
-  left: 15px;
+.gbl-head-btn {
+  display: none;
+  position: absolute;
+  margin: 0;
+  top: 10px;
+  right: $gutter - 5px;
+  height: 45px;
+  width: 45px;
+  color: transparent;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 rgba(black, 0.1);
+  transition: box-shadow 0.2s, opacity 0.2s;
+
+  &:after {
+    @include icon-pseudo;
+    @include sprite($menu-grey);
+
+    top: 13px;
+    left: 13px;
+  }
+
+  &.active::after {
+    @include sprite($close-grey);
+
+    top: 14px;
+    left: 15px;
+  }
+
+  @media screen and ( max-width: $medium + 100px ) {
+    display: block;
+  }
 }
