@@ -7,3 +7,20 @@
   padding-top: 120px;
   padding-bottom: 40px;
 }
+
+.hs-rich-text {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  strong {
+    font-weight: 700;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
+}
