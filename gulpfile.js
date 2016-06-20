@@ -43,7 +43,7 @@ gulp.task('server', function(){
 gulp.task('sass', function(){
   gulp.src(src.sass)
     .pipe(sass({
-      outputStyle: [ 'compressed' ]
+      outputStyle: [ 'expanded' ]
     }).on('error', sass.logError))
     .pipe(prefix())
     .pipe(gulp.dest(site.css))
