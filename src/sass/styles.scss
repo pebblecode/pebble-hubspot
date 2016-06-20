@@ -1,10 +1,10 @@
 @charset "utf-8";
 
 // BASE
-@import "base/_variables.scss";
 @import "base/_mixins.scss";
-@import "base/_fonts.scss";
 @import "base/_sprite.scss";
+@import "base/_variables.scss";
+@import "base/_fonts.scss";
 @import "base/_normalize.scss";
 
 // SHARED
