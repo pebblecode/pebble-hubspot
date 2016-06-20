@@ -17,6 +17,7 @@
   letter-spacing: 2px;
   font-size: $eta - 2px;
   display: inline-block;
+  cursor: pointer;
 
   &:hover {
     color: $primary;
