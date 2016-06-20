@@ -17,7 +17,7 @@
   }
 }
 
-$gbl-sprite-path: '../../../../img/gbl-sprite.svg';
+$gbl-sprite-path: $hs-cdn-url + 'images/gbl-sprite.svg';
 $play-pink: 28px 32px $gbl-sprite-path -407px -69px;
 $play-ink: 28px 32px $gbl-sprite-path -375px -69px;
 $arrowr-pink: 8px 12px $gbl-sprite-path -319px -33px;
@@ -51,7 +51,7 @@ $vimeo-white: 24px 21px $gbl-sprite-path -128px -33px;
 $vimeo-pink: 24px 21px $gbl-sprite-path 0px -33px;
 
 
-$client-sprite-path: '../../../../img/client-sprite.svg';
+$client-sprite-path: $hs-cdn-url + 'images/client-sprite.svg';
 $adon-logo: 71px 31px $client-sprite-path -731px -218px;
 $vfs-logo: 195px 28px $client-sprite-path -450px -221px;
 $bybox-logo: 172px 33px $client-sprite-path -461px -126px;

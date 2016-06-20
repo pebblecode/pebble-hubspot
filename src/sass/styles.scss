@@ -2,10 +2,11 @@
 
 // BASE
 @import "base/_mixins.scss";
-@import "base/_sprite.scss";
 @import "base/_variables.scss";
+@import "base/_sprite.scss";
 @import "base/_fonts.scss";
 @import "base/_normalize.scss";
+@import "base/_themes.scss";
 
 // SHARED
 @import "shared/_body.scss";
