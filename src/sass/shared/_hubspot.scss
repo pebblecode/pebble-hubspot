@@ -25,7 +25,12 @@
   }
 }
 
-.widget-type-form {
+.widget-type-form,
+.widget-type-linked_image {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.widget-type-linked_image {
+  margin-bottom: 60px;
 }
