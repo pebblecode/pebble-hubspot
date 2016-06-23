@@ -1075,6 +1075,7 @@ input[type="checkbox"]:checked + span::after {
 
 .hs-rich-text img {
   max-width: 100%;
+  height: auto;
 }
 
 .hs-rich-text table {
@@ -1089,6 +1090,11 @@ input[type="checkbox"]:checked + span::after {
 
 .widget-type-linked_image {
   margin-bottom: 60px;
+}
+
+.widget-type-linked_image img {
+  max-width: 100%;
+  height: auto;
 }
 
 .gbl-head {
